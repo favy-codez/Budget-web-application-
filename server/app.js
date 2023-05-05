@@ -7,14 +7,17 @@ const connectDB = require('./db/connect');
 
 // routers
 const authRouter = require('./routes/auth');
-const jobsRouter = require('./routes/jobs');
+
+//routes
+app.use('/api/v1/auth',  authRouter)
+
 
 app.use(express.json());
 // extra packages
 
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 const start = async () => {
   try {
